@@ -18,36 +18,44 @@ getAllProducts('story.json').then(function(response) {
     console.error("Failed!", error);
 });
 
-async function allProductsList() {
+async function productLoop(){
 	const products = await getAllProducts();
-	const list = document.getElementById('products-list');
 	
 	products.forEach(function (product){
 		const productCard = document.createElement('article');
+		
+		const list = document.getElementById('products-list');
 		list.appendChild(productCard);
 		productCard.setAttribute('class','card row');
+		
 		const productLink = document.createElement('a');
 		productCard.appendChild(productLink);
-		productLink.setAttribute('href', 'produit.html');
-		productLink.setAttribute('class', 'row')
+		productLink.setAttribute('href', `produit.html?${product._id}`);
+		productLink.setAttribute('class', 'row');
+		
 		const leftPart = document.createElement('div');
 		productLink.appendChild(leftPart);
-		leftPart.setAttribute('class', 'col-6')
+		leftPart.setAttribute('class', 'col-6');
+		
 		const rightPart = document.createElement('div');
 		productLink.appendChild(rightPart);
-		rightPart.setAttribute('class', 'col-6');
+		rightPart.setAttribute('class', 'right-part-card col-6');
+		
 		const productImage = document.createElement('img');
 		leftPart.appendChild(productImage);
 		productImage.setAttribute('src', product.imageUrl);
+		
 		const productName = document.createElement('h4');
 		rightPart.appendChild(productName);
-		productName.setAttribute('class','product-name');
+		productName.setAttribute('class','products-list-names');
+		
 		const productPrice = document.createElement('p');
 		rightPart.appendChild(productPrice);
-		productPrice.setAttribute('class', 'product-price');
+		productPrice.setAttribute('class', 'products-list-prices');
+		
 		productName.textContent = product.name;
 		productPrice.textContent = product.price / 100 + ' €';
-		
+		console.log(product.varnish);
 	});
 };
 
