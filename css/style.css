@@ -1,0 +1,55 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Header */
+.heading {
+  background-color: #f3e9f1;
+}
+.heading a {
+  color: black;
+}
+.heading .basket-icon {
+  font-size: 2rem;
+  text-align: center;
+}
+.heading img {
+  width: 10rem;
+}
+.heading .nav-link {
+  font-size: 1.5rem;
+  font-family: "Gochi Hand", cursive;
+}
+
+/* Homepage */
+main #products {
+  font-family: "Roboto", sans-serif;
+  margin: 50px 0px 50px 0px;
+}
+main .products-list a {
+  text-decoration: none;
+}
+main .products-list img {
+  height: 200px;
+  width: 250px;
+}
+
+/* Product page*/
+.product {
+  margin-top: 100px;
+}
+.product #product-img {
+  width: 100%;
+}
+.product .product-features {
+  padding-top: 30px;
+}
+.product .product-features #varnish-select {
+  right: 0px;
+}
+.product .product-features .btn {
+  right: 15px;
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
