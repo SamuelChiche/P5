@@ -10,6 +10,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fontawesome/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
 
 
@@ -19,40 +20,77 @@
 
 <body>
     <div class="page-container">
+        <!-- Header -->
         <div class="bloc heading">
             <header class="container">
+                <!-- Barre de navigation header -->
                 <nav class="row justify-content-around navbar navbar-expand-lg">
+                    <!-- Logo ORINOCO -->
                     <a class="col navbar-brand" href="index.html"> <img src="images/logo-orinoco.png"> </a>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="panier.html"><i class="fas fa-shopping-basket basket-icon"></i> Panier</a>
+                            <!-- Icone et lien page panier -->
+                            <a class="nav-link" href="panier.html"><i class="fas fa-shopping-basket basket-icon"></i>
+                                Panier</a>
                         </li>
                     </ul>
                 </nav>
             </header>
         </div>
+        <!-- Main -->
         <main class="container">
-            <section class="row product">
-                <div class="col">
-                    <img src="#" alt="Photo du produit" id="product-img">
-                </div>
-                <div class="col product-features">
-                    <h4 id="product-name">
-
-                    </h4>
-                    <p id="product-price">
-    
-                    </p>
-                    <p id="product-description">
-    
-                    </p>
-                    <label for="varnish-select" class="product-varnish-selection">
-                    </label>
-                    <select name="varnish" id="varnish-select">
-                        <option value=""></option>
-                    </select>
-                    <div class="product-order">
-                        <button class="btn btn-addtocar btn-lg">Ajouter au panier</button>
+            <!-- Produit unique -->
+            <section class="product-view">
+                <div class="row">
+                    <!-- Image produit -->
+                    <div class="col-lg-6 order-1">
+                        <img src="#" alt="" id="product-img" class="image_selected">
+                    </div>
+                    <div class="col-lg-6 order-2">
+                        <!-- Caractéristique produit -->
+                        <div class="product-features">
+                            <!-- Barre de navigation -->
+                            <nav>
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+                                    <li class="breadcrumb-item active">Produits</li>
+                                </ol>
+                            </nav>
+                            <!-- Nom du produit -->
+                            <h2 id="product-name">
+                            </h2>
+                            <!-- Prix du produit -->
+                            <h4 id="product-price">
+                            </h4>
+                            <hr class="singleline">
+                            <div class="middle-row">
+                                <!-- Description du produit -->
+                                <p id="product-description">
+                                </p>
+                                <div class="col-xs-6">
+                                    <!-- Sélecteur d'option produit -->
+                                    <label for="varnish-select" class="product-varnish-selection">
+                                        Choix du vernis :
+                                    </label>
+                                    <select name="varnish" id="varnish-select">
+                                    </select>
+                                </div>
+                            </div>
+                            <hr class="singleline">
+                            <div class="row buttons-row">
+                                <!-- Boutons  -->
+                                <div class="shopping-buttons col-xs-6">
+                                    <!-- Bouton ajouter au panier -->
+                                    <button type="button" class="btn-cart btn btn-primary shop-button" id="add-to-cart">
+                                        Ajouter au panier
+                                    </button>
+                                    <!-- Bouton acheter maintenant-->
+                                    <button type="button" class="btn-cart btn btn-success shop-button" id="go-to-cart">
+                                        Acheter maintenant
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -60,14 +98,25 @@
     </div>
 
     <!-- Bootstrap script-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- Ressources Javascript -->
     <script src="js/index.js"></script>
     <script src="js/produit.js"></script>
+    <script src="js/panier.js"></script>
+    <!-- Fonction Javascript -->
     <script>
         getAllProducts();
         productPage();
+        addToCart();
     </script>
 </body>
+
 </html>
